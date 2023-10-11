@@ -1,0 +1,112 @@
+// menu açıldığında animasyon
+
+@keyframes scaleIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+// en baştakı tanımladığımı classname select
+// sonuna  !important koymamız önemli yoksa çalışmaz
+.custom-select {
+	&__control {
+		background-color: transparent !important;
+		border: none !important;
+		border-radius: 0 !important;
+		border-bottom: 1px solid gainsboro !important;
+		box-shadow: none !important;
+
+		// menu açıldığında css
+		&--menu-is-open {
+			border-color: orange !important;
+			transition: all 0.4s ease-in !important;
+		}
+	}
+	// select input content
+	&__value-container {
+		padding: 0 !important;
+		cursor: text !important;
+		text-align: start !important;
+		padding-left: 10px !important;
+	}
+
+	// inputun yazısı içeriği için css
+
+	&__input-container {
+		color: orange !important;
+		font-size: 14px !important;
+	}
+
+	// bu ise sağ taraftakı iki ikonu bölen simgeyi silmek için css
+	&__indicator-separator {
+		display: none !important;
+	}
+
+	// bu ise sağ taraftaki iconlar için cursor verdim
+
+	&__indicators {
+		cursor: pointer !important;
+	}
+
+	// bu ise sadece sağ taraftaki ikonlar için geçerli
+	&__indicator {
+		color: gainsboro !important;
+
+		&:hover {
+			color: orange !important;
+			transition: all 0.4s ease-in !important;
+		}
+	}
+
+	// multi select de value seçildikten sonra oluşan badge için css
+	&__multi-value {
+		background-color: goldenrod !important;
+		border-radius: 0.5rem !important;
+	}
+
+	//  multi value de seçilen badge içindeki yazı için css
+	&__multi-value__label {
+		font-size: 12px !important;
+		color: gainsboro !important;
+	}
+
+	// multi select de seçilen value badge içindeki silme ikonu için
+	&__multi-value__remove {
+		color: rgba(white, 0.8) !important;
+
+		&:hover {
+			background-color: transparent !important;
+			color: rgba(rgb(236, 230, 230), 0.5) !important;
+			transition: all 0.1s ease-in !important;
+		}
+	}
+
+	// react select açılan menu için css
+
+	&__menu {
+		background-color: #1111 !important;
+		color: gainsboro !important;
+		animation: scaleIn 0.45s ease-in-out;
+	}
+
+	// bu da menu içindeki datalar için css
+
+	&__option {
+		cursor: pointer !important;
+
+		// eğer herhangi bir elemana focus olduysa
+		// lighten scssin özel fonksiyonudur
+		&--is-focused {
+			background-color: lighten(#1111, 1%) !important;
+		}
+	}
+}

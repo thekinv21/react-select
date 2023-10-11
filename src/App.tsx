@@ -1,5 +1,6 @@
 import './App.css'
 import reactLogo from './assets/react.svg'
+import CustomizeSelect from './components/CustomizeSelect/CustomizeSelect'
 import MultipleSelect from './components/MultipleSelect/MultipleSelect'
 import SingleSelect from './components/SignleSelect/SingleSelect'
 import viteLogo from '/vite.svg'
@@ -23,6 +24,10 @@ function App() {
 
 			<div className='w-[450px] mb-5 '>
 				<MultipleSelect />
+			</div>
+
+			<div className='w-[450px] mb-5 '>
+				<CustomizeSelect />
 			</div>
 		</>
 	)
