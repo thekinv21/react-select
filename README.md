@@ -1,27 +1,41 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# react-select library
 
-Currently, two official plugins are available:
+React-Select is a React component library. This library allows you to create a drop-down menu that provides a number of options for users to choose from. As users make their selections, they can filter, sort and search options
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Link for use this library
+* https://react-select.com/home
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    1) yarn add react-select
+    2) npm install react-select
+    3) pnpm install react-select
+    
 
-- Configure the top-level `parserOptions` property like this:
+## TailwindCss for customize
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+    1) yarn add -D tailwindcss postcss autoprefixer
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    2) npx tailwindcss init -p
+
+    3) content: [
+            "./index.html",
+            "./src/**/*.{js,ts,jsx,tsx}",
+        ],
+    
+    4) Add index css file :
+
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+    5) npm run dev or yarn run dev
+    
+## How to look customized react-select
+
+![1](https://github.com/thekinv21/react-select/assets/92122363/96ef76a9-864e-4861-9ba1-1edff590e42c)
+
+
+
+
+  
